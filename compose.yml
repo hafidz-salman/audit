@@ -1,11 +1,7 @@
 services:
   app:
-    image: docker.io/library/php:8.3-fpm
+    build: .
     container_name: laravel-app
-    working_dir: /var/www/html
-    volumes:
-      - .:/var/www/html
-    command: bash -c "composer install && php artisan serve --host=0.0.0.0 --port=8000"
     ports:
       - "8000:8000"
     depends_on:
@@ -17,6 +13,14 @@ services:
       DB_DATABASE: laravel_db
       DB_USERNAME: laravel
       DB_PASSWORD: secret
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+      - /var/www/html/node_modules
+    command: >
+      bash -c "php artisan key:generate --force &&
+               php artisan migrate --force &&
+               php artisan serve --host=0.0.0.0 --port=8000"
 
   db:
     image: docker.io/library/postgres:16
