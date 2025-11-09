@@ -11,7 +11,7 @@
     <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl w-full mx-4">
         <div class="flex flex-col md:flex-row">
             <!-- Left Panel -->
-            <div class="bg-gradient-to-br from-blue-600 to-purple-700 p-8 md:w-1/2 text-white">
+            <div class="bg-gradient-to-br from-blue-700 to-purple-800 p-8 md:w-1/2 text-white">
                 <div class="text-center mb-8">
                     <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-graduation-cap text-2xl"></i>
