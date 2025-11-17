@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -42,5 +43,11 @@ class ProfileController extends Controller
         $user->update($data);
 
         return redirect()->route('profile.show')->with('success', 'Profile berhasil diupdate');
+    }
+
+    public function viewUser(User $user)
+    {
+        $user->load(['role', 'unit', 'dataKinerja', 'auditAsAuditor', 'validasiAsValidator']);
+        return view('profile.user', compact('user'));
     }
 }

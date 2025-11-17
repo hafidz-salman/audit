@@ -22,6 +22,11 @@ class IndikatorKinerja extends Model
         return $this->belongsTo(StandarMutu::class, 'standar_id', 'standar_id');
     }
 
+    public function standar()
+    {
+        return $this->belongsTo(StandarMutu::class, 'standar_id', 'standar_id');
+    }
+
     public function kriteria()
     {
         return $this->hasMany(Kriteria::class, 'indikator_id', 'indikator_id');

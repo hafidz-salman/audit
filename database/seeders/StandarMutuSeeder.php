@@ -10,26 +10,11 @@ class StandarMutuSeeder extends Seeder
     public function run(): void
     {
         $standars = [
-            [
-                'nama_standar' => 'Standar Akademik',
-                'kategori' => 'Pendidikan',
-                'deskripsi' => 'Standar mutu untuk kegiatan akademik dan pembelajaran'
-            ],
-            [
-                'nama_standar' => 'Standar Penelitian',
-                'kategori' => 'Penelitian',
-                'deskripsi' => 'Standar mutu untuk kegiatan penelitian dan publikasi'
-            ],
-            [
-                'nama_standar' => 'Standar Pengabdian',
-                'kategori' => 'Pengabdian',
-                'deskripsi' => 'Standar mutu untuk kegiatan pengabdian kepada masyarakat'
-            ],
-            [
-                'nama_standar' => 'Standar Administrasi',
-                'kategori' => 'Administrasi',
-                'deskripsi' => 'Standar mutu untuk pelayanan administrasi'
-            ]
+            ['nama_standar' => 'Standar Akademik', 'kategori' => 'Akademik', 'deskripsi' => 'Standar mutu untuk kegiatan akademik'],
+            ['nama_standar' => 'Standar Penelitian', 'kategori' => 'Akademik', 'deskripsi' => 'Standar mutu untuk kegiatan penelitian'],
+            ['nama_standar' => 'Standar Pengabdian', 'kategori' => 'Non-Akademik', 'deskripsi' => 'Standar mutu untuk pengabdian masyarakat'],
+            ['nama_standar' => 'Standar Manajemen', 'kategori' => 'Manajemen', 'deskripsi' => 'Standar mutu untuk manajemen institusi'],
+            ['nama_standar' => 'Standar Keuangan', 'kategori' => 'Manajemen', 'deskripsi' => 'Standar mutu untuk pengelolaan keuangan']
         ];
 
         foreach ($standars as $standar) {

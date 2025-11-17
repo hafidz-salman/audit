@@ -22,6 +22,13 @@ class DatabaseSeeder extends Seeder
             StandarMutuSeeder::class,
             IndikatorKinerjaSeeder::class,
             KriteriaSeeder::class,
+            DataKinerjaSeeder::class,
+            ValidasiSeeder::class,
+            AuditSeeder::class,
+            AuditTemuanSeeder::class,
+            TindakLanjutSeeder::class,
+            LaporanSeeder::class,
+            AuditTrailSeeder::class,
         ]);
     }
 }
